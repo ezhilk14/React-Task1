@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.app {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.price-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+.price-card h2 {
+    margin: 0;
+    color: #333;
+}
+
+.price-card h3 {
+    margin: 10px 0;
+    color: #555;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.price-card li {
+    margin: 5px 0;
+    color: #777;
+}
