@@ -1,65 +1,54 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PriceCard from './PriceCard';
-
-class App extends React.Component {
-    render() {
-        const cardData = [
-            {
-                plan: "FREE",
-                price: "$0/month",
-                features: [
-                    "Single User", 
-                    "50GB Storage", 
-                    "Unlimited Public Projects", 
-                    "Community Access", 
-                    "Unlimited Private Projects", 
-                    "Dedicated Phone Support", 
-                    "Free Subdomain", 
-                    "Monthly Status Reports"
-                ],
-                isPro: false
-            },
-            {
-                plan: "PLUS",
-                price: "$9/month",
-                features: [
-                    "5 Users", 
-                    "50GB Storage", 
-                    "Unlimited Public Projects", 
-                    "Community Access", 
-                    "Unlimited Private Projects", 
-                    "Dedicated Phone Support", 
-                    "Free Subdomain", 
-                    "Monthly Status Reports"
-                ],
-                isPro: false
-            },
-            {
-                plan: "PRO",
-                price: "$49/month",
-                features: [
-                    "Unlimited Users", 
-                    "50GB Storage", 
-                    "Unlimited Public Projects", 
-                    "Community Access", 
-                    "Unlimited Private Projects", 
-                    "Dedicated Phone Support", 
-                    "Free Subdomain", 
-                    "Monthly Status Reports"
-                ],
-                isPro: true
-            }
-        ];
-
-        return (
-            <div className="app">
-                {cardData.map((card, index) => (
-                    <PriceCard key={index} {...card} />
-                ))}
-            </div>
-        );
-    }
+.app {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+.price-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+}
+
+.price-card.pro {
+    background-color: #f0f8ff;
+}
+
+.price-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.price-card h4 {
+    margin: 10px 0;
+    color: #555;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.price-card li {
+    margin: 5px 0;
+    color: #777;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
