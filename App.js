@@ -1,37 +1,54 @@
-class PriceCard extends React.Component {
-    render() {
-        const { title, price, features } = this.props;
-        return (
-            <div className="price-card">
-                <h2>{title}</h2>
-                <h3>{price}</h3>
-                <ul>
-                    {features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PriceCard from './PriceCard';
 
 class App extends React.Component {
     render() {
         const cardData = [
             {
-                title: "Basic",
-                price: "$9.99",
-                features: ["Feature 1", "Feature 2", "Feature 3"]
+                plan: "FREE",
+                price: "$0/month",
+                features: [
+                    "Single User", 
+                    "50GB Storage", 
+                    "Unlimited Public Projects", 
+                    "Community Access", 
+                    "Unlimited Private Projects", 
+                    "Dedicated Phone Support", 
+                    "Free Subdomain", 
+                    "Monthly Status Reports"
+                ],
+                isPro: false
             },
             {
-                title: "Standard",
-                price: "$19.99",
-                features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+                plan: "PLUS",
+                price: "$9/month",
+                features: [
+                    "5 Users", 
+                    "50GB Storage", 
+                    "Unlimited Public Projects", 
+                    "Community Access", 
+                    "Unlimited Private Projects", 
+                    "Dedicated Phone Support", 
+                    "Free Subdomain", 
+                    "Monthly Status Reports"
+                ],
+                isPro: false
             },
             {
-                title: "Premium",
-                price: "$29.99",
-                features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"]
+                plan: "PRO",
+                price: "$49/month",
+                features: [
+                    "Unlimited Users", 
+                    "50GB Storage", 
+                    "Unlimited Public Projects", 
+                    "Community Access", 
+                    "Unlimited Private Projects", 
+                    "Dedicated Phone Support", 
+                    "Free Subdomain", 
+                    "Monthly Status Reports"
+                ],
+                isPro: true
             }
         ];
 
